@@ -7,12 +7,14 @@ interface Props {
     dot: string;
   };
 }
-export const Pill = ({ label, color }: Props) => {
+
+const Pill = ({ label, color }: Props) => {
+  const baseStyles =
+    "inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium mr-1";
+
   return (
-    <span
-      className={`inline-flex px-3 py-1 rounded-full text-sm font-medium mr-1 ${color.badge} ${color.dot}`}
-    >
-      {label}
-    </span>
+    <span className={`${baseStyles} ${color.badge} ${color.dot}`}>{label}</span>
   );
 };
+
+export default Pill;

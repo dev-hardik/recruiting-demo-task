@@ -1,5 +1,9 @@
+'use client'; 
+import React from "react";
 import { Dashboard } from "@/components/dashboard";
 
-export default function Home() {
+const page = () => {
   return <Dashboard />;
 }
+
+export default page;

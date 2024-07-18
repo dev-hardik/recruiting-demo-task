@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Table } from "../table";
-import { Filters } from "./filters";
 import { data } from "@/lib/api/mock-data";
+
+import { Table } from "@/components/table";
+import { Filters } from "@/components/dashboard/filters";
 
 export const Dashboard = () => {
   const [list, setList] = useState(data);
@@ -35,6 +36,7 @@ export const Dashboard = () => {
   return (
     <div className="flex">
       <Filters filters={filters} setFilters={setFilters} list={list} />
+
       <div className="flex-1 p-5">
         <div>Search</div>
         <Table list={list} />

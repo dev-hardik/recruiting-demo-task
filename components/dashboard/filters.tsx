@@ -1,6 +1,6 @@
 "use client";
-import { filterFields } from "@/lib/api/mock-data";
 import React, { useState } from "react";
+import { filterFields } from "@/lib/api/mock-data";
 
 interface Props {
   filters: any;
@@ -117,8 +117,8 @@ export const Filters = ({ filters, setFilters, list }: Props) => {
                     checked={filters[field?.value]?.includes(option?.value)}
                     onChange={() => handleFilterChange(field, option)}
                   />
-                  <span className="flex-1">{option?.label}</span>
-                  <span>{getItemCount(field, option)}</span>
+                  <span className="flex-1 text-sm font-medium">{option?.label}</span>
+                  <span className="text-sm font-medium">{getItemCount(field, option)}</span>
                 </label>
               ))}
             </div>

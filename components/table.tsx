@@ -1,7 +1,7 @@
 "use client";
-import { tagsColor } from "@/lib/api/mock-data";
 import React from "react";
-import { Pill } from "./utils/pill";
+import { tagsColor } from "@/lib/api/mock-data";
+import Pill from "@/components/utils/pill";
 
 interface Props {
   list: any;
@@ -42,7 +42,7 @@ export const Table = ({ list }: Props) => {
               <td className="py-3 px-4 border-b border-gray-200 text-sm">
                 {item?.tags?.map((tag) => (
                   <Pill key={tag} label={tag} color={tagsColor[tag]} />
-                ))}{" "}
+                ))}
               </td>
               <td className="py-3 px-4 border-b border-gray-200 text-sm">
                 {item?.active ? <i className="fa-solid fa-check"></i> : "-"}
