@@ -17,7 +17,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/dev-hardik/recruiting-task
+   git clone https://github.com/dev-hardik/recruiting-demo-task
    cd recruiting-task
    ```
 
